@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src/ -d lib/",
-    "dev:server": "npm run build && nodemon lib/index.js",
-    "prepublish": "npm run build",
+    "start" : "npm run build && node lib/index.js",
     "flow": "flow"
   },
   "repository": {

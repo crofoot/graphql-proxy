@@ -1,6 +1,6 @@
 import express from "express";
 import expressGraphQL from "express-graphql";
-import { buildAsyncSchema } from "./schema";
+import { buildAsyncSchema } from "./schema/";
 
 
 const PORT = 4000;
@@ -15,5 +15,6 @@ app.use('/graphql', expressGraphQL(async req => ({
 );
 
 app.listen(PORT, () => {
+    console.log(`GraphQL Server Started at ${new Date()}`)
     console.log(`GraphQL Server Running http://127.0.0.1:${PORT}/graphql`)
 })
