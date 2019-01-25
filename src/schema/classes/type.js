@@ -1,18 +1,4 @@
-export class Mutation {
-    constructor(name: ?String, args: ?Object) {
-        this.name = name;
-        this.args = args;
-    }
-}
-
-
-export class Query {
-    constructor(name: ?String, args: ?Object) {
-        this.name = name;
-        this.args = args;
-    }
-}
-
+/* @flow */
 export class Type {
     constructor(name: ?String, get: ?String, post: ?String, templateUrl: ?String, queries: ?Array<Query>, mutations: ?Array<Mutation>) {
         this.name = name;

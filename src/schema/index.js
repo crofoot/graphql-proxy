@@ -1,1 +1,2 @@
-export { default as buildAsyncSchema } from "./builder";
+/* @flow */
+export { schema, buildAsyncSchema, createType, readType, updateType, deleteType } from './schema'

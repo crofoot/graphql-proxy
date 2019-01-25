@@ -5,6 +5,11 @@ GraphQL layer/proxy for querying existing REST apis.
 ### About
 graphql-proxy allows you to build a GraphQL layer on top of your exisiting REST api without modifing it, with minimal configuration.
 
+### Scripts
+
+` npm run build ` will compile a new build
+` npm start ` will build and start your application
+
 ### How to use 
 
 The current way to use graphql-proxy is to create a configuration object like the following and pass it to the create method to the Type class in the builder.js file.

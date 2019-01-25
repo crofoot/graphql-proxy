@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src/ -d lib/",
-    "start" : "npm run build && node lib/index.js",
+    "start": "npm run build && node lib/index.js",
     "flow": "flow"
   },
   "repository": {
@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.1.1",
