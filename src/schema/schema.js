@@ -136,6 +136,12 @@ export const createType = async (config: ?Type) => {
 
 // reads a type from the schema
 export const readType = (type: ?String) => {
+        try {
+            return schemaComposer.get(t ype).getFieldNames();
+        } catch (e) {
+            console.log(e)
+            return null;
+        }
 }
 
 
@@ -146,8 +152,14 @@ export const updateType = (type: ?String) => {
 
 // delete type from schema
 export const deleteType = (type: ?String) => {
-}
-
-
-export const getSchema = () => {
+    try {
+        let isDeleted = schemaComposer.delete(type)
+        if(isDeleted){
+            schema = schemaComposer.buildSchema();
+        }
+        return isDeleted;
+    } catch (e) {
+        console.log(e)
+        return null;
+    }
 }
