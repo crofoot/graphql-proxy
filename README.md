@@ -11,7 +11,7 @@ graphql-proxy allows you to build a GraphQL layer on top of your existing REST a
 
 ### How to use 
 
-The current way to use graphql-proxy is to create a configuration object like the following. If you dont support list you can just pass can empty object
+The current way to use graphql-proxy is to create a configuration object like the following. If you don't support lists (getList, postList) you can just pass empty an object.
 
 ``` javascript
 config =   {
