@@ -1,7 +1,6 @@
-/* @flow */
 
 // builds up object recursively
-export const build = (object, data) => {
+exports.build = (object, data) => {
 
     for (var property in data) {
         if (typeof object[property] === 'object') {
@@ -13,7 +12,4 @@ export const build = (object, data) => {
     return object
 }
 
-export const decodeRegexUrl = (url: ? String, id) => {
-    // console.log(url.replace(/{.*}/g, id));
-    return url.replace(/{.*}/g, id);
-} 
+exports.decodeRegexUrl = (url, id) => url.replace(/{.*}/g, id);
