@@ -12,9 +12,9 @@ const configurationList = [
         templateUrl: 'https://jsonplaceholder.typicode.com/posts/1',
         get: {
             url: 'https://jsonplaceholder.typicode.com/posts/{id}',
+            queryByProperty: 'id',
             query: {
                 name: 'post',
-                queryByProperty: 'id',
                 args: {
                     id: 'Int!',
                 }

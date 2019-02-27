@@ -22,7 +22,7 @@ configurationToSchema = async (configuration) => {
         args: configuration.get.query.args,
         resolve: async ({ args }) => {
             try {
-                const { data } = await axios.get(decodeRegexUrl(configuration.get.url, args[configuration.get.query.queryByProperty]))
+                const { data } = await axios.get(decodeRegexUrl(configuration.get.url, args[configuration.get.queryByProperty]))
                 console.log(data)
                 return data;
             } catch (e) {
@@ -60,7 +60,7 @@ configurationToSchema = async (configuration) => {
             args: configuration.getList.query.args,
             resolve: async ({ args }) => {
                 try {
-                    const { data } = await axios.get(decodeRegexUrl(configuration.getList.url, args[configuration.getList.query.queryByProperty]))
+                    const { data } = await axios.get(decodeRegexUrl(configuration.getList.url, args[configuration.getList.queryByProperty]))
                     console.log(data)
                     return data;
                 } catch (e) {
@@ -95,7 +95,7 @@ buildSchemaAsync = async (configurationList) => {
                 
             await configurationToSchema(configuration);
         } catch (e) {
-            console.log(e)
+            // console.log(e)
             console.error(`ERROR: Unable to create schema for ${configurationList[i].name}`)
         }
     }
